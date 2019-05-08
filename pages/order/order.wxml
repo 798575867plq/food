@@ -1,0 +1,35 @@
+<!--pages/order/order.wxml-->
+<view class="topNav">
+  <view wx:for="{{navItem}}" bindtap="{{tabChange(item.bootType)}}" class="navItem" class="{{[currentNav==item.bootType?'navItem_active':'']}}">
+    <view class="iconfont {{item.icon}}"></view>
+    <view>{{ item.title }}</view>
+  </view>
+</view>
+
+<view class='orderItem'>
+  <view class='order-shop'>
+    <view class='order-img'>
+      <image src='../../images/shop1.jpg'></image>
+    </view>
+    <view class='order-info'>
+      <view class='order-name'>
+        商家名字
+      </view>
+      <view class='order-state'>
+        订单状态
+      </view>
+    </view>
+  </view>
+  <view class='order-menu'>
+    <view class='order-menuName'>
+      菜品名字
+    </view>
+    <view class='order-price'>
+      ￥90.00
+    </view>
+  </view>
+  <view class='order-evaluate'>
+    <button>评价</button>
+  </view>
+
+</view>

@@ -1,0 +1,50 @@
+/* pages/me/me.wxss */
+
+page {
+  background-color: #eee;
+}
+
+.top {
+  display: flex;
+  width: 100%;
+  background-color: #1296db;
+  padding: 40rpx;
+}
+
+.top-img {
+  width: 160rpx;
+  height: 160rpx;
+  margin-left: 50rpx;
+}
+
+.top-img image {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.top-name {
+  margin-left: 40rpx;
+  color: #fff;
+  line-height: 100rpx;
+}
+
+.me-lists {
+  margin-top: 20rpx;
+}
+
+.me-list {
+  display: flex;
+  padding: 20rpx 40rpx;
+  justify-content: space-between;
+  background-color: #fff;
+  margin-top: 4rpx;
+  color: #333;
+}
+
+.copyright{
+  text-align: center;
+  font-size: 28rpx;
+  margin-top:60rpx;
+  color: #999;
+}

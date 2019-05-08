@@ -1,0 +1,101 @@
+/* pages/home/home.wxss */
+
+.top {
+  display: flex;
+  width: 90%;
+  margin: 20rpx auto;
+  padding: 5px 0px;
+  border: 1px solid #c1c1c1;
+  border-radius: 10px;
+}
+
+.top i {
+  /* margin-top: 1.5%; */
+  margin-left: 5px;
+  line-height: 1.5rem;
+  font-size: 0.8rem;
+}
+
+.top input {
+  padding: 0px 5px;
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+.swiper {
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+swiper-item {
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.swiper image {
+  width: 100%;
+}
+
+.lists {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.listItem {
+  width: 14%;
+  align-items: center;
+  text-align: center;
+  margin: 2% 5%;
+}
+
+.listItem-img {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.listItem-img image {
+  width: 100%;
+  height: 100%;
+}
+
+.listItem-name {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.shop {
+  padding: 40rpx;
+}
+
+.shopItem {
+  display: flex;
+  margin-top:20rpx;
+}
+
+.shopItem-img {
+  width: 260rpx;
+  height: 180rpx;
+  margin-right: 20rpx;
+}
+
+.shopItem-img image {
+  width: 100%;
+  height: 100%;
+}
+
+.shopItem-name {
+  font-size: 1.2rem;
+}
+
+.shopItem-sale, .shopItem-cost {
+  font-size: 0.8rem;
+  margin-top: 20rpx;
+}
+
+.shopItem-sale text, .shopItem-cost text {
+  margin-right: 20rpx;
+  color: #666;
+}

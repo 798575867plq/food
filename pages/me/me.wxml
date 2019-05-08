@@ -1,0 +1,24 @@
+<!--pages/me/me.wxml-->
+<view class='top'>
+  <view class='top-img'>
+    <image src='../../images/1.png'></image>
+  </view>
+  <view class='top-name'>
+    用户微信名字
+  </view>
+</view>
+
+<view class='me-lists'>
+  <view class='me-list' wx:for="{{melist}}">
+    <view class='list-left'>
+      {{item.name}}
+    </view>
+    <view class='list-right'>
+      <i class="iconfont icon-jiantouyou"></i>
+    </view>
+  </view>
+</view>
+
+<view class='copyright'>
+  版权所有
+</view>

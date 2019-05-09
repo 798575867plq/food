@@ -37,25 +37,26 @@
   </view>
 
   <view class='shop'>
-    <view class='shopItem' wx:for="{{shopItem}}">
-      <view class='shopItem-img'>
-        <image src="{{item.img}}"></image>
+    <navigator url='../menu/menu'>
+      <view class='shopItem' wx:for="{{shopItem}}">
+        <view class='shopItem-img'>
+          <image src="{{item.img}}"></image>
+        </view>
+        <view class='shopItem-info'>
+          <view class='shopItem-name'>
+            {{item.name}}
+          </view>
+          <view class='shopItem-sale'>
+            <text>{{item.score}}</text>
+            <text>月售{{item.sale}}</text>
+          </view>
+          <view class='shopItem-cost'>
+            <text>起送{{item.start}}</text>
+            <text>配送{{item.tip}}</text>
+          </view>
+        </view>
       </view>
-      <view class='shopItem-info'>
-        <view class='shopItem-name'>
-          {{item.name}}
-        </view>
-        <view class='shopItem-sale'>
-          <text>{{item.score}}</text>
-          <text>月售{{item.sale}}</text>
-        </view>
-        <view class='shopItem-cost'>
-          <text>起送{{item.start}}</text>
-          <text>配送{{item.tip}}</text>
-        </view>
-      </view>
-    </view>
-
+    </navigator>
 
   </view>
 </view>

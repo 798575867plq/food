@@ -19,12 +19,12 @@ Page({
       title: '加载中...',
       mask: true
     });
-    // let list = [{}];
-    // for (let i = 0; i < 26; i++) {
-    //   list[i] = {};
-    //   list[i].name = String.fromCharCode(65 + i);
-    //   list[i].id = i;
-    // }
+    let list = [{}];
+    for (let i = 0; i < list.length; i++) {
+      list[i] = {};
+      list[i].name =data.list[i].name;
+      list[i].id = i;
+    }
     
      this.setData({
       list: list,

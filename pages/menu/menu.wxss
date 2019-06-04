@@ -114,6 +114,7 @@
   background-color: #fff;
   padding: 20rpx;
   position: relative;
+  /* align-items: flex-end; */
 }
 
 .menu-img {
@@ -144,7 +145,14 @@
   bottom: 20rpx;
 }
 
-.menu-plus {
+.number-item {
+  display: flex;
+  position: absolute;
+  bottom: 20rpx;
+  right: 20rpx;
+}
+
+/* .menu-plus {
   color: #1296db;
 }
 
@@ -152,7 +160,7 @@
   position: absolute;
   bottom: 20rpx;
   right: 20rpx;
-}
+} */
 
 .shoppingCar-menu {
   width: 100%;
@@ -230,7 +238,7 @@
   padding-left: 10px;
 }
 
-.number{
+.number {
   /* margin-top:10rpx; */
   padding-left: 10px;
 }

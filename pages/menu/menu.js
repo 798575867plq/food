@@ -7,11 +7,23 @@ Page({
     TabCur: 0,
     MainCur: 0,
     VerticalNavTop: 0,
+    number: 0,
     list: [{
       name: "hh"
     }, {
       name: "aaa"
     }],
+    tab: [{
+      name: "商品",
+      code: "sp"
+    }, {
+      name: "评论",
+      code: "pl"
+    }, {
+      name: "商家",
+      code: "sj"
+    }],
+    currentTab: "sp",
     load: true
   },
   showModal(e) {
@@ -23,6 +35,10 @@ Page({
     this.setData({
       modalName: null
     })
+  },
+  tabChange() {
+    let code=this.data.tab.code;
+    this.currentTab = code;
   },
   onLoad() {
     wx.showLoading({

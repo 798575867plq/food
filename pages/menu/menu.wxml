@@ -28,30 +28,32 @@
   </view>
 </view>
 <view class='tab'>
-  <view class='tab-item tab-active'>
-    商品
+  <view wx:for="{{tab}}" wx:key class='tab-item' bindtap="tabChange" class="{{currentTab==item.code?'tab-active':''}}">
+    {{item.name}}
   </view>
-  <view class='tab-item'>
+  <!-- <view class='tab-item'>
     评论
   </view>
   <view class='tab-item'>
     商家
-  </view>
+  </view> -->
 </view>
-<view class="VerticalBox">
-  <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}" style="height:calc(100vh - 370rpx)">
-    <view class="cu-item {{index==TabCur?'text-green cur':''}}" wx:for="{{list}}" wx:key bindtap='tabSelect' data-id="{{index}}">
-      {{item.name}}
-    </view>
-  </scroll-view>
-  <scroll-view class="VerticalMain" scroll-y scroll-with-animation style="height:calc(100vh - 370rpx)" scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain">
-    <view class="padding-top padding-lr" wx:for="{{list}}" wx:key id="main-{{index}}">
-      <view class='cu-bar solid-bottom bg-white'>
-        <view class='action'>
-          <text class='cuIcon-title text-green'></text> {{item.name}} </view>
+
+<view class='page1' wx:if="{{currentTab=='sp'}}">
+  <view class="VerticalBox">
+    <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}" style="height:calc(100vh - 375rpx)">
+      <view class="cu-item {{index==TabCur?'text-green cur':''}}" wx:for="{{list}}" wx:key bindtap='tabSelect' data-id="{{index}}">
+        {{item.name}}
       </view>
-      <view class="cu-list menu-avatar">
-        <!-- <view class="cu-item">
+    </scroll-view>
+    <scroll-view class="VerticalMain" scroll-y scroll-with-animation style="height:calc(100vh - 375rpx)" scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain">
+      <view class="padding-top padding-lr" wx:for="{{list}}" wx:key id="main-{{index}}">
+        <view class='cu-bar solid-bottom bg-white'>
+          <view class='action'>
+            <text class='cuIcon-title text-green'></text> {{item.name}} </view>
+        </view>
+        <view class="cu-list menu-avatar">
+          <!-- <view class="cu-item">
           <view class="cu-avatar radius lg">
             <image src="https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png"></image>
           </view>
@@ -68,102 +70,129 @@
             <view class="cu-tag round bg-red sm">5</view>
           </view>
         </view> -->
-        <view class='menu'>
-          <view class='menu-img'>
-            <image src="../../images/shop1.jpg"></image>
-          </view>
-          <view class='menu-info'>
-            <view class='menu-name'>
-              菜品名字
+          <view class='menu'>
+            <view class='menu-img'>
+              <image src="../../images/shop1.jpg"></image>
             </view>
-            <view class="menu-price">
-              ￥20.00
+            <view class='menu-info'>
+              <view class='menu-name'>
+                菜品名字
+              </view>
+              <view class="menu-price">
+                ￥20.00
+              </view>
+            </view>
+            <view class='number-item'>
+              <view class='number-change'>
+                <i class="iconfont icon-jian"></i>
+              </view>
+              <view class='number'>
+                1
+              </view>
+              <view class='number-change'>
+                <i class="iconfont icon-jia"></i>
+              </view>
             </view>
           </view>
-          <view class='menu-plus'>
-            <i class="iconfont icon-jia"></i>
-          </view>
-        </view>
 
-        <view class='menu'>
-          <view class='menu-img'>
-            <image src="../../images/shop1.jpg"></image>
-          </view>
-          <view class='menu-info'>
-            <view class='menu-name'>
-              菜品名字24234
+          <view class='menu'>
+            <view class='menu-img'>
+              <image src="../../images/shop1.jpg"></image>
             </view>
-            <view class="menu-price">
-              ￥20.00
+            <view class='menu-info'>
+              <view class='menu-name'>
+                菜品名字24234
+              </view>
+              <view class="menu-price">
+                ￥20.00
+              </view>
+            </view>
+            <view class='number-item'>
+              <view class='number-change'>
+                <i class="iconfont icon-jian"></i>
+              </view>
+              <view class='number'>
+                1
+              </view>
+              <view class='number-change'>
+                <i class="iconfont icon-jia"></i>
+              </view>
             </view>
           </view>
-          <view class='menu-plus'>
-            <i class="iconfont icon-jia"></i>
-          </view>
-        </view>
 
-        <view class='menu'>
-          <view class='menu-img'>
-            <image src="../../images/shop1.jpg"></image>
-          </view>
-          <view class='menu-info'>
-            <view class='menu-name'>
-              菜品名字32
+          <view class='menu'>
+            <view class='menu-img'>
+              <image src="../../images/shop1.jpg"></image>
             </view>
-            <view class="menu-price">
-              ￥20.00
+            <view class='menu-info'>
+              <view class='menu-name'>
+                菜品名字32
+              </view>
+              <view class="menu-price">
+                ￥20.00
+              </view>
             </view>
-          </view>
-          <view class='menu-plus'>
-            <i class="iconfont icon-jia"></i>
+             <view class='number-item'>
+              <view class='number-change'>
+                <i class="iconfont icon-jian"></i>
+              </view>
+              <view class='number'>
+                1
+              </view>
+              <view class='number-change'>
+                <i class="iconfont icon-jia"></i>
+              </view>
+            </view>
           </view>
         </view>
       </view>
-    </view>
-  </scroll-view>
-</view>
+    </scroll-view>
+  </view>
 
-<view class='shoppingCar-menu'>
-  <view class='shoppingCar' bindtap="showModal" data-target="bottomModal">
-    <i class="iconfont icon-gouwuche"></i>
-    <view class='cu-tag badge sp-tag radius'>9</view>
-  </view>
-  <view class='priceAll'>
-    <text>￥0</text>
-  </view>
-  <view class='pricePei'>
-    另需要配送费￥
-    <text>4</text>元
-  </view>
-  <view class='priceStart'>
-    ￥0起送
-  </view>
-</view>
-
-<view class="cu-modal bottom-modal {{modalName=='bottomModal'?'show':''}}">
-  <view class="cu-dialog">
-    <view class="cu-bar bg-white">
-      <view class="action text-green">购物车</view>
-      <view class="action text-blue" bindtap="hideModal">清空</view>
+  <view class='shoppingCar-menu'>
+    <view class='shoppingCar' bindtap="showModal" data-target="bottomModal">
+      <i class="iconfont icon-gouwuche"></i>
+      <view class='cu-tag badge sp-tag radius'>9</view>
     </view>
-    <view class="padding-xl">
-      <view class='gwc-item'>
-        <view class='gwc-menu-name'>
-          菜品名字
+    <view class='priceAll'>
+      <text>￥0</text>
+    </view>
+    <view class='pricePei'>
+      另需要配送费￥
+      <text>4</text>元
+    </view>
+    <view class='priceStart'>
+      ￥0起送
+    </view>
+  </view>
+
+  <view class="cu-modal bottom-modal {{modalName=='bottomModal'?'show':''}}">
+    <view class="cu-dialog">
+      <view class="cu-bar bg-white">
+        <view class="action text-green">购物车</view>
+        <view class="action text-blue" bindtap="hideModal">清空</view>
+      </view>
+      <view class="padding-xl">
+        <view class='gwc-item'>
+          <view class='gwc-menu-name'>
+            菜品名字
+          </view>
+          <view class='gwc-menu-price'>
+            ￥10
+          </view>
+          <view class='number-change'>
+            <i class="iconfont icon-jian"></i>
+          </view>
+          <view class='number'>
+            1
+          </view>
+          <view class='number-change'>
+            <i class="iconfont icon-jia"></i>
+          </view>
         </view>
-        <view class='gwc-menu-price'>
-          ￥10
-        </view>
-        <view class='number-change'>
-          <i class="iconfont icon-jian"></i>
-        </view>
-        <view class='number'>
-          1
-        </view>
-        <view class='number-change'>
-          <i class="iconfont icon-jia"></i>
-        </view>
+
       </view>
     </view>
   </view>
+
 </view>

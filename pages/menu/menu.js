@@ -14,6 +14,16 @@ Page({
     }],
     load: true
   },
+  showModal(e) {
+    this.setData({
+      modalName: e.currentTarget.dataset.target
+    })
+  },
+  hideModal(e) {
+    this.setData({
+      modalName: null
+    })
+  },
   onLoad() {
     wx.showLoading({
       title: '加载中...',
@@ -22,11 +32,11 @@ Page({
     let list = [{}];
     for (let i = 0; i < list.length; i++) {
       list[i] = {};
-      list[i].name =data.list[i].name;
+      list[i].name = data.list[i].name;
       list[i].id = i;
     }
-    
-     this.setData({
+
+    this.setData({
       list: list,
       listCur: list[0]
     })

@@ -28,7 +28,7 @@
   </view>
 </view>
 <view class='tab'>
-  <view class='tab-item'>
+  <view class='tab-item tab-active'>
     商品
   </view>
   <view class='tab-item'>
@@ -124,7 +124,7 @@
 </view>
 
 <view class='shoppingCar-menu'>
-  <view class='shoppingCar'>
+  <view class='shoppingCar' bindtap="showModal" data-target="bottomModal">
     <i class="iconfont icon-gouwuche"></i>
     <view class='cu-tag badge sp-tag radius'>9</view>
   </view>
@@ -137,5 +137,33 @@
   </view>
   <view class='priceStart'>
     ￥0起送
+  </view>
+</view>
+
+<view class="cu-modal bottom-modal {{modalName=='bottomModal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white">
+      <view class="action text-green">购物车</view>
+      <view class="action text-blue" bindtap="hideModal">清空</view>
+    </view>
+    <view class="padding-xl">
+      <view class='gwc-item'>
+        <view class='gwc-menu-name'>
+          菜品名字
+        </view>
+        <view class='gwc-menu-price'>
+          ￥10
+        </view>
+        <view class='number-change'>
+          <i class="iconfont icon-jian"></i>
+        </view>
+        <view class='number'>
+          1
+        </view>
+        <view class='number-change'>
+          <i class="iconfont icon-jia"></i>
+        </view>
+      </view>
+    </view>
   </view>
 </view>

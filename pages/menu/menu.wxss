@@ -57,6 +57,10 @@
   padding: 20rpx 0px;
 }
 
+.tab-active {
+  color: #1296db;
+}
+
 .VerticalNav.nav {
   width: 200rpx;
   white-space: initial;
@@ -160,6 +164,7 @@
   position: fixed;
   bottom: 0px;
   color: #fff;
+  z-index: 9999;
 }
 
 .shoppingCar {
@@ -176,8 +181,8 @@
 
 .sp-tag {
   position: absolute;
-  
-  
+  right: 10rpx !important;
+  top: 0px !important;
 }
 
 .priceAll text {
@@ -189,4 +194,43 @@
 .priceStart {
   background-color: #60c7ff;
   padding: 0px 40rpx;
+}
+
+.cu-bar {
+  height: 70rpx !important;
+}
+
+.padding-xl {
+  margin-bottom: 40px;
+  padding-top: 0px !important;
+}
+
+.gwc-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0px;
+  align-items: center;
+}
+
+.gwc-menu-name {
+  flex: 3;
+  text-align: left;
+}
+
+.gwc-menu-price {
+  color: red;
+  font-size: 32rpx;
+  margin-right: 20rpx;
+}
+
+.number-change {
+  color: #1296db;
+  /* margin-top:10rpx; */
+  padding-left: 10px;
+}
+
+.number{
+  /* margin-top:10rpx; */
+  padding-left: 10px;
 }

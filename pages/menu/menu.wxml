@@ -28,7 +28,7 @@
   </view>
 </view>
 <view class='tab'>
-  <view wx:for="{{tab}}" wx:key class='tab-item' bindtap="tabChange" class="{{currentTab==item.code?'tab-active':''}}">
+  <view wx:for="{{tab}}" wx:key class='tab-item' bindtap="tabChange" data-code="{{item.code}}" class="{{currentTab==item.code?'tab-active':''}}">
     {{item.name}}
   </view>
   <!-- <view class='tab-item'>
@@ -38,8 +38,7 @@
     商家
   </view> -->
 </view>
-
-<view class='page1' wx:if="{{currentTab=='sp'}}">
+<view class='page1' wx:if="{{currentTab=='sp'}}" style='margin-bottom:80rpx'>
   <view class="VerticalBox">
     <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}" style="height:calc(100vh - 375rpx)">
       <view class="cu-item {{index==TabCur?'text-green cur':''}}" wx:for="{{list}}" wx:key bindtap='tabSelect' data-id="{{index}}">
@@ -132,7 +131,7 @@
                 ￥20.00
               </view>
             </view>
-             <view class='number-item'>
+            <view class='number-item'>
               <view class='number-change'>
                 <i class="iconfont icon-jian"></i>
               </view>
@@ -194,5 +193,91 @@
       </view>
     </view>
   </view>
+</view>
 
+<view class='evaluate' wx:if="{{currentTab=='pl'}}">
+  <view class='score'>
+    <view class='score-left'>
+      <view class='scoreAll'>4.2</view>
+      <view>综合评分</view>
+      <view>高于周边商家80%</view>
+    </view>
+    <view class='score-right'>
+      <view>服务态度 </view>
+      <view>服务态度 </view>
+      <view>送达时间
+        <text>38分钟</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='customer'>
+    <view class='evaluate-type'>
+      <view>全部</view>
+      <view>分类1</view>
+      <view>分类2</view>
+    </view>
+    <view class='isContent'>
+      <radio checked='false'></radio> 只看有内容的评价
+    </view>
+    <view class='customer-items'>
+      <view class='customer-item'>
+        <view class='user-img'>
+          <image src='../../images/1.png'></image>
+        </view>
+        <view class='customer-info'>
+          <view class='user-name'>
+            用户名
+          </view>
+          <view class='user-score'>
+            评分 20分钟送达
+          </view>
+          <view class='user-content'>
+            用户评价内容
+          </view>
+          <view class='user-tag'>
+            <text>标签</text>
+          </view>
+        </view>
+        <view class='user-time'>
+          2019-8-9 20:21:23
+        </view>
+      </view>
+      <view class='customer-item'>
+        <view class='user-img'>
+          <image src='../../images/1.png'></image>
+        </view>
+        <view class='customer-info'>
+          <view class='user-name'>
+            用户名
+          </view>
+          <view class='user-score'>
+            评分 20分钟送达
+          </view>
+          <view class='user-content'>
+            用户评价内容
+          </view>
+          <view class='user-tag'>
+            <text>标签</text>
+          </view>
+        </view>
+        <view class='user-time'>
+          2019-8-9 20:21:23
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='shopStore' wx:if="{{currentTab=='sj'}}">
+  <view class='store-card'>
+    <view class='store-card-top'>
+      <view class="">
+        商家名字
+      </view>
+      <view class=''>
+        评分五角星
+      </view>
+    </view>
+  </view>
 </view>

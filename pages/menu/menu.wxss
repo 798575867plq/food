@@ -55,6 +55,7 @@
   display: flex;
   justify-content: space-around;
   padding: 20rpx 0px;
+  border-bottom: 1px solid #ccc;
 }
 
 .tab-active {
@@ -180,7 +181,7 @@
 }
 
 .shoppingCar i {
-  font-size: 30px;
+  font-size: 60rpx;
   border-radius: 100%;
   padding: 30rpx;
   margin-left: 20rpx;
@@ -236,9 +237,106 @@
   color: #1296db;
   /* margin-top:10rpx; */
   padding-left: 10px;
+  font-size: 28rpx;
 }
 
 .number {
   /* margin-top:10rpx; */
   padding-left: 10px;
+  font-size: 28rpx;
+}
+
+/* 评论页面 */
+
+.score {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+.score-left {
+  text-align: center;
+  margin: 20rpx;
+  padding-right: 20rpx;
+  border-right: 1px solid #ccc;
+  line-height: 1.3rem;
+  font-size: 24rpx;
+}
+
+.score-right {
+  flex: 2;
+  margin: 20rpx;
+  font-size: 24rpx;
+  line-height: 1.3rem;
+}
+
+.scoreAll {
+  color: #f90;
+  font-size: 48rpx;
+}
+
+.customer {
+  margin-top: 40rpx;
+  border-top: 1px solid #ccc;
+}
+
+.evaluate-type {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #ddd;
+}
+
+.evaluate-type view {
+  background-color: #ccc;
+  padding: 10rpx 20rpx;
+  margin-right: 20rpx;
+}
+
+.isContent {
+  padding-left: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.customer-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 30rpx 30rpx 0rpx 30rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.user-img {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.user-img image {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.customer-info {
+  flex: 2;
+  padding-left: 20rpx;
+  font-size: 24rpx;
+  line-height: 1.1rem;
+}
+
+.user-tag {
+  margin-top: 10rpx;
+}
+
+.user-tag text {
+  border: 1px solid #999;
+  color: #999;
+  padding: 8rpx 12rpx;
+}
+
+.user-time {
+  color: #666;
+  font-size: 24rpx;
 }

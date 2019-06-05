@@ -36,9 +36,11 @@ Page({
       modalName: null
     })
   },
-  tabChange() {
-    let code=this.data.tab.code;
-    this.currentTab = code;
+  tabChange(e) {
+    let code = e.currentTarget.dataset.code;
+    this.setData({currentTab:code});
+    // this.data.tab.code = code;
+    console.log(this.data.currentTab);
   },
   onLoad() {
     wx.showLoading({

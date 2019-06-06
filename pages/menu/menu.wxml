@@ -270,14 +270,7 @@
 </view>
 
 <view class='shopStore' wx:if="{{currentTab=='sj'}}">
-  <view class='store-card'>
-    <view class='store-card-top'>
-      <view class="">
-        商家名字
-      </view>
-      <view class=''>
-        评分五角星
-      </view>
-    </view>
-  </view>
+ <view class='store-card-notice'>
+ 
+ </view>
 </view>

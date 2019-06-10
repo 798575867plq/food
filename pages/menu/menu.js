@@ -7,7 +7,6 @@ Page({
     TabCur: 0,
     MainCur: 0,
     VerticalNavTop: 0,
-    number: 0,
     list: [{
       name: "hh"
     }, {
@@ -23,8 +22,21 @@ Page({
       name: "商家",
       code: "sj"
     }],
+    pltype: [{
+      name: "全部",
+      code: "01"
+    }, {
+      name: "分类1",
+      code: "02"
+    }, {
+      name: "分类2",
+      code: "03"
+    }],
     currentTab: "sp",
-    load: true
+    currentType: "01",
+    load: true,
+    isShow: true,
+    isCar: true
   },
   showModal(e) {
     this.setData({
@@ -36,11 +48,37 @@ Page({
       modalName: null
     })
   },
+  showPage(e) {
+    this.setData({
+      isCar: !this.data.isCar
+    })
+  },
+  showP(e) {
+    this.setData({
+      isShow: false
+    })
+  },
+  hideP(e) {
+    this.setData({
+      isShow: true
+    })
+  },
   tabChange(e) {
     let code = e.currentTarget.dataset.code;
-    this.setData({currentTab:code});
+    this.setData({
+      currentTab: code
+    });
     // this.data.tab.code = code;
     console.log(this.data.currentTab);
+  },
+
+  typeChange(e) {
+    let code = e.currentTarget.dataset.code;
+    this.setData({
+      currentType: code
+    });
+    // this.data.tab.code = code;
+    console.log(this.data.currentType);
   },
   onLoad() {
     wx.showLoading({

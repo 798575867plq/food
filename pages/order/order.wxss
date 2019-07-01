@@ -21,8 +21,11 @@
   border-bottom: 2px solid #1296db;
 }
 
-.orderItem {
+.orderItems {
   margin-top: 240rpx !important;
+}
+
+.orderItem {
   padding: 40rpx;
   border: 1px solid #eee;
   box-shadow: 0px 0px 20px #eee;
@@ -41,8 +44,8 @@
 }
 
 .order-img {
-  width: 160rpx;
-  height: 120rpx;
+  width: 140rpx;
+  height: 100rpx;
   margin-right: 20px;
 }
 
